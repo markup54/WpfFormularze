@@ -1,0 +1,68 @@
+﻿<Window x:Class="WpfApp8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp8"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <TabControl>
+        <TabItem Header="Powtórka">
+            <StackPanel>
+                <TextBlock>
+            Podaj długość boku figury
+                </TextBlock>
+                <TextBox x:Name="dlugoscTextbox">
+
+                </TextBox>
+                <Button Click="Button_Click">Oblicz pole</Button>
+                <GroupBox Header="Wybierz figurę">
+                    <StackPanel>
+                        <RadioButton x:Name="koloradio" 
+                             GroupName="figuryradio">
+                            koło
+                        </RadioButton>
+                        <RadioButton x:Name="trojkatradio"
+                             GroupName="figuryradio">
+                            trójkąt równoboczny
+                        </RadioButton>
+                        <RadioButton x:Name="kwadratradio"
+                             GroupName="figuryradio">
+                            kwadrat
+                        </RadioButton>
+                    </StackPanel>
+                </GroupBox>
+                <Button Click="Button_Click_1">Oblicz pole</Button>
+
+                <GroupBox Header="liczby do średniej">
+                    <StackPanel>
+                        <CheckBox x:Name="liczba1">1</CheckBox>
+                        <CheckBox x:Name="liczba2">2</CheckBox>
+                        <CheckBox x:Name="liczba3">3</CheckBox>
+                        <CheckBox x:Name="liczba4">4</CheckBox>
+                        <CheckBox x:Name="liczba5">5</CheckBox>
+                        <CheckBox x:Name="liczba6">6</CheckBox>
+                    </StackPanel>
+
+                </GroupBox>
+                <Button Click="Button_Click_2">
+                    Oblicz średnią
+                </Button>
+
+                <TextBlock>
+            Wybierz figurę
+                </TextBlock>
+                <ComboBox x:Name="figuraComboBox">
+                    <ComboBoxItem>Kwadrat</ComboBoxItem>
+                    <ComboBoxItem>Koło</ComboBoxItem>
+                    <ComboBoxItem>Trójkąt</ComboBoxItem>
+                </ComboBox>
+                <Button Click="Button_Click_3">Oblicz obwód</Button>
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="kalkulator">
+            
+        </TabItem>
+    </TabControl>
+   
+</Window>
